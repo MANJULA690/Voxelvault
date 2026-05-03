@@ -1,0 +1,111 @@
+.upload-page {
+  min-height: 100vh;
+  padding: 48px 24px 80px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upload-container {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.upload-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 36px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  color: var(--neon);
+}
+
+.upload-header h1 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text);
+}
+.upload-header p { color: var(--muted); font-size: 0.875rem; margin-top: 2px; }
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.field-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+textarea { resize: vertical; min-height: 100px; }
+
+.thumb-preview {
+  margin-top: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: 140px;
+  border: 1px solid var(--border);
+}
+.thumb-preview img {
+  width: 100%; height: 140px;
+  object-fit: cover;
+  display: block;
+}
+
+.tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.tag-removable {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.tag-removable button {
+  background: transparent;
+  color: var(--neon);
+  font-size: 14px;
+  line-height: 1;
+  padding: 0 2px;
+  transition: color var(--transition);
+}
+.tag-removable button:hover { color: var(--danger); }
+
+.upload-btn {
+  align-self: flex-start;
+  padding: 14px 32px;
+  font-size: 1rem;
+  margin-top: 4px;
+}
+.upload-btn:disabled { opacity: 0.6; cursor: not-allowed; transform: none !important; }
+
+@media (max-width: 600px) {
+  .form-row { grid-template-columns: 1fr; }
+  .upload-container { padding: 24px; }
+}
